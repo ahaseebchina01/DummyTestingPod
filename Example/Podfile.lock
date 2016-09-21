@@ -1,0 +1,16 @@
+PODS:
+  - DummyTestingPod (0.1.0)
+
+DEPENDENCIES:
+  - DummyTestingPod (from `../`)
+
+EXTERNAL SOURCES:
+  DummyTestingPod:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DummyTestingPod: 78308b9f473c627b4e573b62bad0352a9e655209
+
+PODFILE CHECKSUM: 21be7043fb2f410823a48e2b6400ff862f98d17a
+
+COCOAPODS: 1.0.1

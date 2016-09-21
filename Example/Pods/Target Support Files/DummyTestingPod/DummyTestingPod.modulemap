@@ -1,0 +1,6 @@
+framework module DummyTestingPod {
+  umbrella header "DummyTestingPod-umbrella.h"
+
+  export *
+  module * { export * }
+}

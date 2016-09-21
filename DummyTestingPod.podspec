@@ -1,42 +1,32 @@
-#
-# Be sure to run `pod lib lint DummyTestingPod.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
-  s.name             = 'DummyTestingPod'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of DummyTestingPod.'
+# 1
+    s.platform = :ios
+    s.ios.deployment_target = '7.0'
+    s.name = 'DummyTestingPod'
+    s.summary = "This is a dummy pod created to check the module map generation."
+    s.requires_arc = true
+#2 
+  s.version = '0.1.0'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/DummyTestingPod'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'haseebOptini' => 'ahaseeb91@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/DummyTestingPod.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'DummyTestingPod/Classes/**/*'
+# 3
+  s.license = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
   
-  # s.resource_bundles = {
-  #   'DummyTestingPod' => ['DummyTestingPod/Assets/*.png']
-  # }
+# 4
+  s.author = { 'ahaseebchina01' => 'ahaseebchina01@gmail.com' }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+# 5
+  s.homepage = 'https://github.com/ahaseebchina01/DummyTestingPod'
+  
+# 6
+  s.source = { :git => 'https://github.com/ahaseebchina01/DummyTestingPod.git', :tag => s.version.to_s }
+  
+#7
+  s.source_files = 'DummyTestingPod/Classes/**/*'
+  s.vendored_library = 'DummyTestingPod/libPredictIO.a'
+  s.public_header_files = 'DummyTestingPod/Classes/**/*'
+  s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration', 'ExternalAccessory'
+  
+#8
+  s.description = "This is a dummy pod used to check the module map generation so that when ever in swift project use_frameworks is written in Podfile there will be no need to create the bridging header."
+
 end

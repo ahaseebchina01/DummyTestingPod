@@ -1,0 +1,6 @@
+framework module DummyTestingPod {
+    umbrella header "PredictIO.h"
+    
+    export *
+    module * { export * }
+}

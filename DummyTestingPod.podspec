@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.summary = "This is a dummy pod created to check the module map generation."
     s.requires_arc = true
 #2 
-  s.version = '0.1.0'
+  s.version = ‘0.3.0’
 
 # 3
   s.license = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }

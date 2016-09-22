@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.summary = "This is a dummy pod created to check the module map generation."
     s.requires_arc = true
 #2 
-  s.version = '0.4.0'
+  s.version = '0.5.0'
 
 # 3
   s.license = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
@@ -23,10 +23,16 @@ Pod::Spec.new do |s|
 #7
   s.source_files = 'DummyTestingPod/Classes/**/*'
   s.vendored_library = 'DummyTestingPod/libPredictIO.a'
-  s.public_header_files = 'DummyTestingPod/Classes/**/*'
+  s.public_header_files = 'DummyTestingPod/Classes/**/*.h'
+  s.preserve_paths = 'DummyTestingPod/**/*.h'
+
   s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration', 'ExternalAccessory'
   
 #8
   s.description = "This is a dummy pod used to check the module map generation so that when ever in swift project use_frameworks is written in Podfile there will be no need to create the bridging header."
-
+#9
+  s.module_map = 'DummyTestingPod/DummyTestingPod.modulemap'
+  s.header_dir = 'DummyTestingPod'
+  s.module_name = 'DummyTestingPod'
+  s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 end

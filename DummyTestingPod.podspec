@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.summary = "This is a dummy pod created to check the module map generation."
     s.requires_arc = true
 #2 
-  s.version = '0.5.0'
+  s.version = '0.6.0'
 
 # 3
   s.license = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
@@ -35,4 +35,7 @@ Pod::Spec.new do |s|
   s.header_dir = 'DummyTestingPod'
   s.module_name = 'DummyTestingPod'
   s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
+  s.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/mypod/DummyTestingPod' }
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2 $(PODS_ROOT)/mypod/DummyTestingPod' }
+
 end

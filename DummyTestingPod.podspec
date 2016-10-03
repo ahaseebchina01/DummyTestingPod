@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/ahaseebchina01/DummyTestingPod.git', :tag => s.version.to_s }
   
 #7
-  s.source_files = ['DummyTestingPod/Classes/**/*','DummyTestingPod/PredictIO.modulemap']
+  s.source_files = ['DummyTestingPod/Classes/**/*']
   s.vendored_library = 'DummyTestingPod/libPredictIO.a'
   s.public_header_files = 'DummyTestingPod/Classes/**/*.h'
   s.preserve_paths = 'DummyTestingPod/**/*.h'
@@ -30,13 +30,13 @@ Pod::Spec.new do |s|
   
 #8
   s.description = "This is a dummy pod used to check the module map generation so that when ever in swift project use_frameworks is written in Podfile there will be no need to create the bridging header."
-#9
+#9 
   s.module_map = 'DummyTestingPod/DummyTestingPod.modulemap'
   s.header_dir = 'DummyTestingPod'
   s.module_name = 'DummyTestingPod'
   s.preserve_path = 'DummyTestingPod/DummyTestingPod.modulemap'
-  s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
-  s.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/mypod/DummyTestingPod' }
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2 $(PODS_ROOT)/mypod/DummyTestingPod' }
+  #s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
+  #s.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/mypod/DummyTestingPod' }
+  #s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2 $(PODS_ROOT)/mypod/DummyTestingPod' }
 
 end

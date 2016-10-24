@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   
 #7
   s.source_files = ['DummyTestingPod/Classes/**/*']
-  s.vendored_library = 'DummyTestingPod/libPredictIO.a'
+  s.vendored_library = 'DummyTestingPod/libPredictIOSDK.a'
   s.public_header_files = 'DummyTestingPod/Classes/**/*.h'
   s.preserve_paths = 'DummyTestingPod/**/*.h'
 

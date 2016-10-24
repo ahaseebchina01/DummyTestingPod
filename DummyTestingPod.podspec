@@ -29,5 +29,5 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration', 'ExternalAccessory'
   
 #8
-  s.description = "This is a dummy pod used to check the module map generation so that when ever in swift project use_frameworks is written in Podfile there will be no need to create the bridging header."s  
+  s.description = "This is a dummy pod used to check the module map generation so that when ever in swift project use_frameworks is written in Pod file there will be no need to create the bridging header."
 end

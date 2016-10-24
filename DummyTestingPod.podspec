@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.summary = "This is a dummy pod created to check the module map generation."
     s.requires_arc = true
 #2 
-  s.version = '0.1.0'
+  s.version = '0.7.0'
 
 # 3
   s.license = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
@@ -30,4 +30,11 @@ Pod::Spec.new do |s|
   
 #8
   s.description = "This is a dummy pod used to check the module map generation so that when ever in swift project use_frameworks is written in Pod file there will be no need to create the bridging header."
+
+#9
+  s.module_map = 'PredictIO-iOS/PredictIO.modulemap'
+  s.header_dir = 'PredictIO-iOS'
+  s.module_name = 'PredictIO'
+  s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
+
 end
